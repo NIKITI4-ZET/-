@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="sound">Sound:</label>
+    <input type="range" id="sound">
+    <div>
+        <p>2.mp3</p>
+        <button onclick="play_song(this.id)" id="1" value="2.mp3">Play</button>
+        <button onclick="pause_song()">Pause</button>
+        <button onclick="stop_song()">Stop</button>
+    </div>
+    <div>
+        <p>3.mp3</p>
+      <button onclick="play_song(this.id)" id="2" value="3.mp3">Play</button>
+        <button onclick="pause_song()">Pause</button>
+        <button onclick="stop_song()">Stop</button>
+    </div>
+    <div>
+        <p>4.mp3</p>
+      <button onclick="play_song(this.id)" id="3" value="4.mp3">Play</button>
+        <button onclick="pause_song()">Pause</button>
+        <button onclick="stop_song()">Stop</button>>
+    </div>
+     <div>
+        <p>5.mp3</p>
+       <button onclick="play_song(this.id)" id="4" value="5.mp3">Play</button>
+        <button onclick="pause_song()">Pause</button>
+        <button onclick="stop_song()">Stop</button>>
+    </div>
+     <div>
+        <p>6.mp3</p>
+      <button onclick="play_song(this.id)" id="5" value="6.mp3">Play</button>
+        <button onclick="pause_song()">Pause</button>
+        <button onclick="stop_song()">Stop</button>>
+    </div>
+    <div>
+           <p>7.mp3</p>
+       <button onclick="play_song(this.id)" id="6" value="7.mp3">Play</button>
+        <button onclick="pause_song()">Pause</button>
+        <button onclick="stop_song()">Stop</button>>
+    </div>
+    <div>
+         <p>8.mp3</p>
+       <button onclick="play_song(this.id)" id="7" value="8.mp3">Play</button>
+        <button onclick="pause_song()">Pause</button>
+        <button onclick="stop_song()">Stop</button>>
+    </div>
+    <audio src="" id="audio"></audio>
+</body>
+<script>
+    audio = document.getElementById("audio")
+
+    function play_song(clicked_id) {
+       audio.src = document.getElementById(clicked_id).value
+        audio.play()
+    }
+
+    function pause_song() {
+        audio.pause()
+    }
+
+    function stop_song() {
+        audio.pause()
+        audio.currentTime = 0
+    }
+</script>
+</html>
